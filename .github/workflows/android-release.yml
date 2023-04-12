@@ -40,7 +40,7 @@ jobs:
       # 6.添加签名密码
       - name: Add Sign Password
         run: |
-          echo "SIGN_STORE_FILE=${{ steps.android_sign.outputs.filePath }}" > android/gradle.properties
+          echo "SIGN_STORE_FILE=${{ steps.android_sign.outputs.filePath }}" >> android/gradle.properties
           echo "SIGN_STORE_PASSWORD=${{ secrets.SIGN_STORE_PASSWORD }}" >> android/gradle.properties
           echo "SIGN_KEY_ALIAS=${{ secrets.SIGN_KEY_ALIAS }}" >> android/gradle.properties
           echo "SIGN_KEY_PASSWORD=${{ secrets.SIGN_KEY_PASSWORD }}" >> android/gradle.properties
